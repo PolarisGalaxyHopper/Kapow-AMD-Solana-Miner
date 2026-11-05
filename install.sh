@@ -60,7 +60,7 @@ else
 fi
 
 echo -e "${MG}[3/4] your settings${NC}"
-chmod +x "$KIT_DIR"/kapow.sh "$KIT_DIR"/start-*.sh "$KIT_DIR"/tools/*.sh "$KIT_DIR"/tools/*.py 2>/dev/null || true
+chmod +x "$KIT_DIR"/*.sh "$KIT_DIR"/*.py 2>/dev/null || true
 [[ -f config.env ]] || cp config.env.example config.env
 # shellcheck disable=SC1091
 source ./config.env
@@ -85,7 +85,7 @@ DESK="${HOME}/Desktop"; APPS="${HOME}/.local/share/applications"
 if [[ -d "$DESK" ]] || [[ -d "$APPS" ]]; then
     mkdir -p "$APPS"
     for ed in 4G 8G; do
-        src="$KIT_DIR/desktop/KAPOW-${ed}.desktop.in"
+        src="$KIT_DIR/KAPOW-${ed}.desktop.in"
         for dst in "$DESK/KAPOW-${ed}.desktop" "$APPS/kapow-${ed,,}.desktop"; do
             [[ -d "$(dirname "$dst")" ]] || continue
             sed "s|@KIT_DIR@|${KIT_DIR}|g" "$src" > "$dst"; chmod +x "$dst"

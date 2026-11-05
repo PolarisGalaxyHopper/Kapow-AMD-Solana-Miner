@@ -4,7 +4,7 @@
 # asked first; the miner is only restarted when the whole rig really reports 0 h/s.
 GPU="${1:-?}"
 PORT="${KAPOW_API_PORT:-10081}"
-DIR="${KAPOW_KIT_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
+DIR="${KAPOW_KIT_DIR:-$(cd "$(dirname "$0")" && pwd)}"
 LOG="${DIR}/watchdog.log"
 stamp() { date '+%Y-%m-%d %H:%M:%S'; }
 

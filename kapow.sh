@@ -95,7 +95,7 @@ while true; do
         -p x \
         --api_listen=127.0.0.1:${API_PORT} \
         --log_file="${KIT_DIR}/kapow-${EDITION}.log" \
-        --watchdog_script="${KIT_DIR}/tools/gpu_restart.sh" \
+        --watchdog_script="${KIT_DIR}/gpu_restart.sh" \
         $TRM_EXTRA
     code=$?
     echo -e "\n  ${YL}[$(date '+%Y-%m-%d %H:%M:%S')] Miner stopped (exit ${code}). Restarting in 10 s. Close the window to stop.${NC}\n"
