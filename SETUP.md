@@ -9,8 +9,8 @@
 ## 2. Install
 
 ```
-git clone https://github.com/PolarisGalaxyHopper/KAPOW-SOL-Miner.git
-cd KAPOW-SOL-Miner
+git clone https://github.com/PolarisGalaxyHopper/Kapow-AMD-Solana-Miner.git
+cd Kapow-AMD-Solana-Miner
 ./install.sh
 ```
 

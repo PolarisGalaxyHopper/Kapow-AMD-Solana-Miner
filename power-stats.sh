@@ -1,7 +1,7 @@
 #!/bin/bash
 # KAPOW — live temperature / fan / power / hashrate in a small terminal.
-# Usage: tools/power-stats.sh [4g|8g]    (default 4g)      Ctrl+C to close.
-ED="${1:-4g}"; DIR="$(cd "$(dirname "$0")/.." && pwd)"; LOG="${DIR}/kapow-${ED}.log"
+# Usage: ./power-stats.sh [4g|8g]    (default 4g)      Ctrl+C to close.
+ED="${1:-4g}"; DIR="$(cd "$(dirname "$0")" && pwd)"; LOG="${DIR}/kapow-${ED}.log"
 PU='\033[0;35m'; GR='\033[0;32m'; YL='\033[1;33m'; RD='\033[1;31m'; CY='\033[1;36m'; DM='\033[2;37m'; NC='\033[0m'
 while true; do
     clear

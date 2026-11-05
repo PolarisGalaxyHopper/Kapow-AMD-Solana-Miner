@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-KAPOW — Power & Health Monitor (small always-on-top window). Usage: tools/power-monitor.py [4g|8g]
+KAPOW — Power & Health Monitor (small always-on-top window). Usage: ./power-monitor.py [4g|8g]
 Pins to top-right of screen. Always on top.
 """
 import gi
@@ -9,7 +9,7 @@ from gi.repository import Gtk, GLib, Gdk
 import glob, re, os, sys
 
 EDITION = (sys.argv[1] if len(sys.argv) > 1 else "4g").lower()
-LOG_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), f"kapow-{EDITION}.log")
+LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"kapow-{EDITION}.log")
 UPDATE_MS = 5000
 Y_POS     = 4
 

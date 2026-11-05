@@ -1,12 +1,12 @@
 #!/bin/bash
 # ============================================================
 #   KAPOW — optional health watchdog
-#   Run it in a second terminal:  tools/watchdog.sh 4g   (or 8g)
+#   Run it in a second terminal:  ./watchdog.sh 4g   (or 8g)
 #   Every 30 s: warns on hot cards / fans at max / memory pressure,
 #   and stops the miner when a card passes the critical temperature.
 #   (kapow.sh restarts the miner 10 s later; if it keeps tripping, fix the cooling.)
 # ============================================================
-ED="${1:-4g}"; DIR="$(cd "$(dirname "$0")/.." && pwd)"
+ED="${1:-4g}"; DIR="$(cd "$(dirname "$0")" && pwd)"
 LOG="${DIR}/watchdog.log"
 # shellcheck disable=SC1091
 source "${DIR}/config.env" 2>/dev/null || true

@@ -10,8 +10,8 @@ Both pay SOL. Pick the one that matches your cards, or run both on a mixed rig (
 ## Install (Linux, HiveOS included)
 
 ```
-git clone https://github.com/PolarisGalaxyHopper/KAPOW-SOL-Miner.git
-cd KAPOW-SOL-Miner
+git clone https://github.com/PolarisGalaxyHopper/Kapow-AMD-Solana-Miner.git
+cd Kapow-AMD-Solana-Miner
 ./install.sh          # downloads TeamRedMiner v0.10.21 from its official release and checks the SHA-256,
                       # asks for your Solana wallet, puts KAPOW 4G / 8G icons on your desktop
 ./start-4g.sh         # or ./start-8g.sh, or double-click the KAPOW icon
@@ -42,12 +42,12 @@ Any Solana wallet works: Phantom, Solflare, Backpack, a hardware wallet, or an e
 | `install.sh` | one-time setup, safe to re-run |
 | `kapow.sh 4g\|8g` | the launcher (banner, settings, auto-restart loop) |
 | `start-4g.sh`, `start-8g.sh` | shortcuts for the launcher |
-| `tools/gpu_restart.sh` | called by the miner when a card looks dead; checks the miner's own stats first so a quiet moment between jobs is not mistaken for a crash |
-| `tools/watchdog.sh 4g\|8g` | optional: warns on hot cards, fans at max, memory pressure; stops the miner above 85 °C |
-| `tools/power-stats.sh 4g\|8g` | small terminal view: temperature, fan, watts and hashrate per card |
-| `tools/power-monitor.py 4g\|8g` | the same as a tiny always-on-top window (needs python3-gi / GTK 3) |
-| `desktop/`, `icons/` | the KAPOW desktop icons |
-| `docs/SETUP.md` | the longer guide: payouts, HiveOS notes, troubleshooting |
+| `gpu_restart.sh` | called by the miner when a card looks dead; checks the miner's own stats first so a quiet moment between jobs is not mistaken for a crash |
+| `watchdog.sh 4g\|8g` | optional: warns on hot cards, fans at max, memory pressure; stops the miner above 85 °C |
+| `power-stats.sh 4g\|8g` | small terminal view: temperature, fan, watts and hashrate per card |
+| `power-monitor.py 4g\|8g` | the same as a tiny always-on-top window (needs python3-gi / GTK 3) |
+| `KAPOW-4G.desktop.in`, `KAPOW-8G.desktop.in`, `kapow4g.svg`, `kapow8g.svg` | the KAPOW desktop icons (install.sh fills in the paths) |
+| `SETUP.md` | the longer guide: payouts, HiveOS notes, troubleshooting |
 
 ## Facts worth knowing
 
@@ -61,7 +61,7 @@ Any Solana wallet works: Phantom, Solflare, Backpack, a hardware wallet, or an e
 
 - Mixed rig: put the 4 GB cards on one edition and the 8 GB cards on the other with `-d` in each window, e.g. start 4G with `TRM_EXTRA="-d 0,1,2"` and 8G with `TRM_EXTRA="-d 3,4,5"` (edit `config.env` between starts, or run `TRM_EXTRA=... ./kapow.sh 8g`).
 - Other payout coins: unMineable pays many coins. Change `SOL:` in `kapow.sh` to another ticker and the pool host to the matching algorithm if you know what you are doing.
-- Run as a service: `tools/watchdog.sh` plus `kapow.sh` in a `screen` or a systemd unit both work; the launcher already restarts the miner after a crash.
+- Run as a service: `watchdog.sh` plus `kapow.sh` in a `screen` or a systemd unit both work; the launcher already restarts the miner after a crash.
 
 ## Licence
 
