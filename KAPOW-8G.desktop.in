@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=KAPOW 8G — SOL Miner
+GenericName=Polaris Galaxy Hopper 8GB GPU Miner
+Comment=Mine SOL with your 8GB AMD GPU (ETCHASH via unMineable). Polaris Galaxy Hopper.
+Icon=@KIT_DIR@/icons/kapow8g.svg
+Exec=x-terminal-emulator -T "KAPOW 8G — SOL MINER" -e "@KIT_DIR@/start-8g.sh"
+Terminal=false
+Categories=Network;Finance;
+Keywords=miner;crypto;solana;kapow;amd;gpu;8g;polaris;
+StartupNotify=true
